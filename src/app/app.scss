@@ -13,7 +13,9 @@
 // for the .md, .ios, or .wp mode classes. The mode class is
 // automatically applied to the <body> element in the app.
 .scroll-content {
-    overflow-y: auto !important;
+    //Quita la barra de scroll, ponerlo en "auto" si da problemas con IOs.
+    overflow-y: hidden;
+    //--------------------//
     width: 100wh;
     height: 100vh;
     color: #fff;
