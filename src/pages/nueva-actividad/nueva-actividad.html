@@ -1,0 +1,37 @@
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Nueva Actividad</ion-title>
+
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+
+  <!--aquí va nuestro formulario-->
+  <form #formulario_nueva_actividad="ngForm" (ngSubmit)="guardar(formulario_nueva_actividad.value, formulario_nueva_actividad.valid)">
+    <div>
+      <ion-item>
+        <ion-label>ICONO</ion-label>
+<!--         <ion-input type="text" #icono="ngModel" name="icono" [(ngModel)]="actividad.icono"></ion-input> -->
+      </ion-item>
+    </div>
+    <div>
+      <ion-item>
+        <ion-label>NOMBRE</ion-label>
+<!--         <ion-input type="text" #nombre="ngModel" name="nombre" [(ngModel)]="actividad.nombre"></ion-input> -->
+      </ion-item>
+    </div>
+    <button type="submit" ion-button>GUARDAR</button>
+  </form>
+
+  <!--FAB Button para cancelar-->
+  <ion-fab right bottom>
+    <button ion-fab color="danger" (click)="cerrarModal()">
+      <ion-icon name="backspace"></ion-icon>
+    </button>
+  </ion-fab>
+  <!--////////////////////////-->
+</ion-content>
